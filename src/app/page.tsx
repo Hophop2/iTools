@@ -61,9 +61,6 @@ export default function Home() {
               in few seconds!
             </p>
             <span className="text-zinc-400 "> Avaible soon...</span>
-            {/* <Link href="#" className="w-20">
-            Let&apos;s go!
-          </Link> */}
           </div>
         </div>
       </div>
