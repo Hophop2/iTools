@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { Send, SendIcon } from "lucide-react";
+import { SendIcon } from "lucide-react";
 import { ChatContext } from "./ChatContext";
 
 interface ChatInputProps {
