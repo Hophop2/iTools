@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <div className="w-full   pt-10 text-center ">
           <h1
-            className=" mx-auto text-6xl  md:text-8xl   font-bold 
+            className=" mx-auto text-6xl  md:text-9xl   font-bold 
          "
           >
             <span className="text-violet-600">I</span>Tools
@@ -28,7 +28,7 @@ export default function Home() {
         <div className=" w-full mt-24 flex-col md:flex-row  flex justify-between">
           <div className=" w-full pb-8 border-b border-white md:border-none h-full px-12 flex flex-col items-center gap-8 justify-center ">
             <div>
-              <h2 className="text-5xl text-center ">
+              <h2 className="text-6xl text-center ">
                 <span className="text-violet-600">AI</span>Reader
               </h2>
               <p className="text-zinc-600 text-center text-xs mt-1">
@@ -48,7 +48,7 @@ export default function Home() {
           {/* section */}
           <div className=" w-full pb-8 h-full px-12 flex flex-col items-center gap-8 justify-center ">
             <div>
-              <h2 className="text-5xl text-center ">
+              <h2 className="text-6xl text-center ">
                 <span className="text-violet-600">AI</span>mage
               </h2>
               <p className="text-zinc-600 text-center text-xs mt-1">
