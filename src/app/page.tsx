@@ -7,8 +7,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <WidthWrapper className="relative">
-      <div className="w-full  pt-10 text-center ">
+    <WidthWrapper className="relative h-[calc(100vh-4rem)]">
+      <div className="w-full   pt-10 text-center ">
         <h1
           className=" mx-auto text-6xl  md:text-8xl   font-bold 
          "
