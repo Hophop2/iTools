@@ -4,7 +4,6 @@ import WidthWrapper from "@/components/WidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
 
 import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
-import Link from "next/link";
 
 export default function Home() {
   return (
