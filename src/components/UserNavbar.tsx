@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import Image from "next/image";
-import { CatIcon, User2Icon } from "lucide-react";
+import { User2Icon } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
