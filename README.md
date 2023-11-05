@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ <h1  align="center">
+ AiReader
 
-## Getting Started
 
-First, run the development server:
+</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="center">
+  <a >
+    <img src=""
+         alt="Screenshot">
+  </a>
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Overview 🎉
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Features 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech/framework used 🔧
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Tech                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| [Next.js](https://nextjs.org)                           | XYZ   |
+| [Typescript](https://www.typescriptlang.org)                           | XYZ   |
+| [tRPC](https://trpc.io)                           | XYZ   |
+| [Kinde](https://kinde.com)                           | for authentication  |
+| [Prisma](https://www.prisma.io)                           | ORM   |
+| [Langchain](https://js.langchain.com/docs/guides/deployment/nextjs)                           | XYZ   |
+| [Openai](https://platform.openai.com/docs/introduction)                           | XYZ   |
+| [Uploadthing](https://uploadthing.com)                           | adds file uploads to app  |
+| [Pinecone](https://www.pinecone.io)                           | Vector storage  |
+| [Tailwind](https://tailwindcss.com)                           | XYZ   |
+| [React-pdf](https://tailwindcss.com)                           | help to display pdf to app   |
+| and other small packages...                        
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Screenshots 📺
+
+<p align="center">
+    <img src="" alt="Screenshot">
+</p>
+
+<p align="center">
+    <img src="" alt="Screenshot">
+</p>
+
+<p align="center">
+    <img src="" alt="Screenshot">
+</p>
+
+## Code Example/Issues 🔍
+
+
+## Installation 💾
+
+## Available scripts
+
+| Command                   | Description                   |     |
+| ------------------------- | ----------------------------- | --- |
+| `npm run start`           | Open local server             |     |
+| `npm run build`           | Create optimized build        |     |
+| `npm run test`            | Run tests                     |     |
+
+
+## Live 📍
+
