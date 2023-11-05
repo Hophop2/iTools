@@ -12,7 +12,7 @@ const Providers = ({ children }: PropsWithChildren) => {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "https://i-tools.vercel.app/api/trpc",
+          url: "http://localhost:3000/api/trpc",
         }),
       ],
     })
@@ -26,3 +26,5 @@ const Providers = ({ children }: PropsWithChildren) => {
 };
 
 export default Providers;
+// https://i-tools.vercel.app/api/trpc
+// http://localhost:3000/api/trpc

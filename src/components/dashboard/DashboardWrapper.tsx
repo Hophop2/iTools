@@ -27,13 +27,13 @@ const DashboardWrapper = () => {
   const [position, setPosition] = useState("newest");
   const [fileToDel, setFileToDel] = useState<string | null>();
   const { data: files, isLoading } = trpc.getFiles.useQuery();
-  console.log(files);
+
   const utils = trpc.useContext();
   const { mutate: deleteFile } = trpc.deleteFile.useMutation({
     onSuccess: () => {
       utils.getFiles.invalidate();
     },
-    //onSettled - trigger when succ or error
+
     onSettled: () => {
       setFileToDel(null);
     },

@@ -9,6 +9,7 @@ import {
 import { TRPCError,} from '@trpc/server'
 import { db } from '@/db'
 import { z } from 'zod'
+import { openai } from '@/lib/openai'
 
 export const appRouter = router({
   authCallback: publicProcedure.query(async () => {
@@ -142,7 +143,62 @@ deleteFile: privateProcedure.input(z.object({id: z.string()})).mutation(async ({
   })
 
   return file
+}),
+
+CreateImage: privateProcedure.input(z.object({prompt: z.string()})).mutation(async({ctx, input}) => {
+  const {userId} = ctx
+const {prompt} = input
+
+  const response = await openai.images.generate({
+    prompt: prompt,
+    n: 1,
+    size: '512x512',
+  })
+
+  return response
+}),
+
+saveImage: privateProcedure.input(z.object({prompt: z.string(), image: z.string()})).mutation(async({ctx, input}) => {
+  const {userId} = ctx
+const {prompt, image} = input
+
+await db.image.create({
+  data: {
+    url: image,
+    prompt: prompt,
+    userId,
+  }
 })
+
+ 
+}),
+
+getImages: privateProcedure.query(async({ctx}) => {
+  const {userId} = ctx
+  console.log(userId)
+ const images = await db.image.findMany({
+    where: {
+        userId: userId
+    }
+  })
+  if(!images) throw new TRPCError({code: 'NOT_FOUND'})
+  
+  return images
+}),
+
+getImage: privateProcedure.input(z.object({imageId: z.string()})).query(async({ctx, input}) => {
+  const {userId} = ctx
+
+  const image = await db.image.findFirst({
+    where: {
+      id: input.imageId,
+      userId
+    }
+  })
+
+  if(!image) throw new TRPCError({code: 'NOT_FOUND'})
+  return image
+}),
 })
 
 export type AppRouter = typeof appRouter
