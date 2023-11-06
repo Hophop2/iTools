@@ -4,7 +4,15 @@ import { trpc } from "@/app/_trpc/client";
 import { ArrowBigLeft, ArrowBigRightDash, Loader2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+interface ImageType {
+  userId: string | null;
+  id: string;
+  prompt: string;
+  url: string;
+  createdAt: string;
+}
 
 const ImageCollection = () => {
   const { data: images } = trpc.getImages.useQuery();
@@ -17,7 +25,7 @@ const ImageCollection = () => {
           {images.map((img) => {
             return (
               <Link
-                href={`aimage/${img.id}`}
+                href={`/aimage/${img.id}`}
                 className="border w-16 h-16 border-violet-600 hover:shadow-lg cursor-pointer hover:shadow-violet-500"
               >
                 <Image width={64} height={64} src={img.url} alt="photo" />
