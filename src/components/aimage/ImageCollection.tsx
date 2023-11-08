@@ -12,7 +12,7 @@ import React, {
 } from "react";
 import { ImageContext } from "./ImageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
@@ -21,65 +21,51 @@ import { FreeMode, Pagination } from "swiper/modules";
 
 const ImageCollection = () => {
   const { images } = useContext(ImageContext);
-  const [position, setPosition] = useState(0);
-  // const [width, setWidth] = useState(0);
-  // const carousel = useRef<HTMLDivElement | null>(null);
-  // const [isDragging, setIsDragging] = useState(false);
+  const [width, setWidth] = useState(0);
+  const carousel = useRef<HTMLDivElement | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
-  // const [iWdth, setIwidth] = useState(0);
-  // const [height, setHeight] = useState(0);
-
-  // useEffect(() => {
-  //   console.log("window.innerHeight", window.innerHeight);
-  //   setIwidth(window.innerWidth);
-  //   setHeight(window.innerHeight);
-  //   if (typeof window !== "undefined" && images && carousel.current) {
-  //     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  //   }
-  // }, [images, iWdth, height]);
+  useEffect(() => {
+    if (images && carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
+  }, [images]);
 
   return (
     <div className="w-full flex justify-center">
-      <div className=" flex   w-2/3 mt-4  h-[4rem]   ">
-        {images && images.length !== 0 ? (
-          <Swiper
-            slidesPerView={6}
-            spaceBetween={5}
-            freeMode={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[FreeMode]}
-            className=" "
+      {images && images.length !== 0 ? (
+        <motion.div className="flex  w-[40vw] overflow-hidden" ref={carousel}>
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            className={`flex gap-4  ${isDragging ? "is-dragging" : ""}`}
+            onDragStart={() => setIsDragging(true)}
+            onDragEnd={() => setIsDragging(false)}
+            whileTap={{ cursor: "grabbing" }}
           >
-            {images.map((img) => {
+            {images.map((img, index) => {
               return (
-                <SwiperSlide key={img.id}>
-                  <Link
-                    href={`/aimage/${img.id}`}
-                    className=" cursor-grab w-16 h-16"
-                  >
-                    <Image
-                      width={64}
-                      height={64}
-                      src={img.url}
-                      alt="photo"
-                      loading="lazy"
-                      className="cursor-pointer"
-                    />
-                  </Link>
-                </SwiperSlide>
+                <Link href={`/aimage/${img.id}`} className="w-16   h-16">
+                  <Image
+                    width={64}
+                    height={64}
+                    src={img.url}
+                    alt="photo"
+                    loading="lazy"
+                    className="cursor-pointer"
+                  />
+                </Link>
               );
             })}
-          </Swiper>
-        ) : images && images.length >= 1 ? (
-          <div className="text-zinc-400">Save some generated images!</div>
-        ) : (
-          <div className="w-full flex justify-center items-center">
-            <Loader2 className="animate-spin" />
-          </div>
-        )}
-      </div>
+          </motion.div>
+        </motion.div>
+      ) : images && images.length >= 1 ? (
+        <div className="text-zinc-400">Save some generated images!</div>
+      ) : (
+        <div className="w-full flex justify-center items-center">
+          <Loader2 className="animate-spin" />
+        </div>
+      )}
     </div>
   );
 };
