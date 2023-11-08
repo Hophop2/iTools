@@ -3,13 +3,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import Image from "next/image";
 
 import { trpc } from "@/app/_trpc/client";
+import { ImageContext } from "./ImageContext";
 
 const ImageGenerator = () => {
+  const { imagesRefetch } = useContext(ImageContext);
+
   const [image, setImage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
@@ -31,6 +34,7 @@ const ImageGenerator = () => {
     onSuccess: () => {
       setImage("");
       setPrompt("");
+      imagesRefetch();
     },
   });
 

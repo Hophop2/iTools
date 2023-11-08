@@ -1,31 +1,42 @@
-import { ReactNode, createContext, useRef, useState } from "react";
-import { useToast } from "../ui/use-toast";
-import { useMutation } from "@tanstack/react-query";
+"use client";
+
+import { ReactNode, createContext } from "react";
 import { trpc } from "@/app/_trpc/client";
+import Slider from "react-slick";
 
-type ImageContextType = {
-  addMessage: () => void;
-  message: string;
-  handleInputChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  isLoading: boolean;
-};
-
-export const ImageContext = createContext<ImageContextType>({
-  addMessage: () => {},
-  message: "",
-  handleInputChange: () => {},
-  isLoading: false,
-});
+interface ImageType {
+  userId: string | null;
+  id: string;
+  prompt: string;
+  url: string;
+  createdAt: string;
+}
 
 interface Props {
   children: ReactNode;
 }
 
-export const ImageContextProvider = ({ children }: Props) => {
-  const { data: images } = trpc.getImages.useQuery();
+type ImageContextType = {
+  images: ImageType[];
+  imagesRefetch: () => void;
+};
 
-  const { mutate: saveImage } = trpc.saveImage.useMutation({
-    onSuccess: () => {},
-  });
-  return <ImageContext.Provider value={"a"}>{children}</ImageContext.Provider>;
+export const ImageContext = createContext<ImageContextType>({
+  images: [],
+  imagesRefetch: () => {},
+});
+
+export const ImageContextProvider = ({ children }: Props) => {
+  const { data: images, refetch: imagesRefetch } = trpc.getImages.useQuery();
+
+  return (
+    <ImageContext.Provider
+      value={{
+        images: images || [],
+        imagesRefetch,
+      }}
+    >
+      {children}
+    </ImageContext.Provider>
+  );
 };

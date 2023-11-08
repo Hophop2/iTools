@@ -1,9 +1,7 @@
 "use client";
 
 import { trpc } from "@/app/_trpc/client";
-import WidthWrapper from "@/components/WidthWrapper";
-import ImageCollection from "@/components/aimage/ImageCollection";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -35,38 +33,35 @@ const page = () => {
   };
 
   return (
-    <WidthWrapper className="min-h-[calc(100vh-8rem)]">
-      <ImageCollection />
-      <div className="flex h-full mt-12 flex-col justify-center items-center pb-8">
-        {image ? (
-          <>
-            <div className="flex w-[512px] items-center mb-2  justify-between  ">
-              <p className="w-3/4 ml-2 text-justify ">
-                Prompt: <span className="text-zinc-400">{image.prompt}</span>
-              </p>
-              <button
-                onClick={() => handleDownload(image.url)}
-                className={buttonVariants({
-                  variant: "link",
-                  size: "sm",
-                })}
-              >
-                Dowloand
-              </button>
-            </div>
-            <Image
-              width={512}
-              height={512}
-              alt="photo"
-              src={image.url}
-              className="shadow-sm shadow-violet-600"
-            />
-          </>
-        ) : (
-          <Loader2 className="animate-spin" />
-        )}
-      </div>
-    </WidthWrapper>
+    <div className="flex h-full mt-12 flex-col justify-center items-center pb-8">
+      {image ? (
+        <>
+          <div className="flex w-[512px] items-center mb-2  justify-between  ">
+            <p className="w-3/4 ml-2 text-justify ">
+              Prompt: <span className="text-zinc-400">{image.prompt}</span>
+            </p>
+            <button
+              onClick={() => handleDownload(image.url)}
+              className={buttonVariants({
+                variant: "link",
+                size: "sm",
+              })}
+            >
+              Dowloand
+            </button>
+          </div>
+          <Image
+            width={512}
+            height={512}
+            alt="photo"
+            src={image.url}
+            loading="lazy"
+          />
+        </>
+      ) : (
+        <Loader2 className="animate-spin" />
+      )}
+    </div>
   );
 };
 
