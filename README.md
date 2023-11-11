@@ -4,7 +4,9 @@
 
 </h1>
 
+## Live 📍
 
+<p align="center"><a href='https://i-tools.vercel.app'>iTools app - AIReader and AImage</a></p>
 
 <p align="center">
   <a >
@@ -14,7 +16,16 @@
 </p>
 
 ## Project Overview 🎉
+<p style="text-align: justify;">This project I created by my curiosity about how works AI tools like image generator or chat. My main goals were to increase my skills in typescript, connections between client-server components, better and efficiently handling loading, error states than in my previous project - iTask. As I was going deeper into the project, I realized new things to learn or improve. The hardest part of this project were handling streaming Api responses and functionality of sending messages 
+and how many different things can happen during this. This project caused a huge improve in my skills especially in what I mentioned above and give me idea for the next project that will be more challenging than iTools.</p>
 
+
+
+**iTools** is a project involving authentication that relies on two AI-based tools. 
+
+**AIReader** - allows you to upload PDF file by dropzone and after that chat with it to gain a specific information from your PDF. Files and messages are stored for every user. Chat uses a infinite message history on scroll.
+
+**AImage** - generate a image according to your vision by your command, after that u can add photo to your invidual carousel collection or discard. Every saved image is stored and you can dowloand it
 
 ## Features 
 
@@ -77,19 +88,41 @@
     <img src="" alt="Screenshot">
 </p>
 
-## Code Example/Issues 🔍
+
 
 
 ## Installation 💾
 
-## Available scripts
+To get started, run this command
+````
+https://github.com/Hophop2/iTools.git
+````
+after that u will be need a .env file with:
+````
+KINDE_CLIENT_ID
+KINDE_CLIENT_SECRET
+KINDE_ISSUER_URL
+KINDE_SITE_UR
+KINDE_POST_LOGOUT_REDIRECT_URL
+KINDE_POST_LOGIN_REDIRECT_URL
 
-| Command                   | Description                   |     |
-| ------------------------- | ----------------------------- | --- |
-| `npm run start`           | Open local server             |     |
-| `npm run build`           | Create optimized build        |     |
-| `npm run test`            | Run tests                     |     |
+DATABASE_URL
+
+UPLOADTHING_SECRET
+UPLOADTHING_APP_ID
+
+PINECONE_API_KEY
+
+OPENAI_API_KEY
+````
+every enviroments u can get from these links:
+- [Kinde](https://kinde.com)
+- [Langchain](https://js.langchain.com/)
+- [database](https://planetscale.com)
+- [Pinecone](https://www.pinecone.io)
+- [Openai](https://platform.openai.com/)
+ 
 
 
-## Live 📍
+
 
