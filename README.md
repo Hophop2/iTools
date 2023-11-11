@@ -1,5 +1,5 @@
  <h1  align="center">
- AiReader
+ iTools
 
 
 </h1>
@@ -18,6 +18,17 @@
 
 ## Features 
 
+- Authentication using Kinde
+- Streaming API Responses in Real-Time
+- Infinite Message Loading
+- Data Fetching Using tRPC & Zod
+- Functional PDF Viewer
+- storing files and images
+- chatting with PDF
+- generating images by prompt
+- handled loading,error states
+- drag and drop uploads
+
 ## Tech/framework used 🔧
 
 | Main Tech                                                    | Description                              |
@@ -27,7 +38,7 @@
 | [tRPC](https://trpc.io)                           | Tool for creating strongly-typed APIs in TypeScript, enabling communication between the client and the server   |
 | [Kinde](https://kinde.com)                           |  Authentication tool  |
 | [Prisma](https://www.prisma.io)                           | Object-Relational Mapping (ORM)   |
-| [Langchain](https://js.langchain.com/docs/guides/deployment/nextjs)                           | XYZ   |
+| [Langchain](https://js.langchain.com/docs/guides/deployment/nextjs)                           | Infinite AI Memory  |
 | [Openai](https://platform.openai.com/docs/introduction)                           |  Platform for working with artificial intelligence, enabling the use of advanced language models and other AI features.   |
 | [Uploadthing](https://uploadthing.com)                           | Adds the capability of file uploads to the application  |
 | [Pinecone](https://www.pinecone.io)                           | Service for vector storage  |
