@@ -57,7 +57,11 @@ const UserNavbar = ({ email, imgUrl, name }: UserNavbarProps) => {
 
         <DropdownMenuSeparator className="bg-zinc-800" />
         <DropdownMenuItem className="cursor-pointer  " asChild>
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/dashboard">AIreader</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator className="bg-zinc-800" />
+        <DropdownMenuItem className="cursor-pointer  " asChild>
+          <Link href="/aimage">AImage</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-zinc-800" />
         <DropdownMenuItem asChild>

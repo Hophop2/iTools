@@ -146,16 +146,24 @@ deleteFile: privateProcedure.input(z.object({id: z.string()})).mutation(async ({
 }),
 
 CreateImage: privateProcedure.input(z.object({prompt: z.string()})).mutation(async({ctx, input}) => {
-  const {userId} = ctx
-const {prompt} = input
+  try {
+    const {userId} = ctx
+    const {prompt} = input
+    
+      const response = await openai.images.generate({
+        prompt: prompt,
+        n: 1,
+        size: '512x512',
+      })
+    
+    
+    
+      return response
+  } catch(err) {
+    console.error('Wystąpił błąd w funkcji CreateImage:', err);
+    throw new Error('Wystąpił błąd podczas generowania obrazu')
+  }
 
-  const response = await openai.images.generate({
-    prompt: prompt,
-    n: 1,
-    size: '512x512',
-  })
-
-  return response
 }),
 
 saveImage: privateProcedure.input(z.object({prompt: z.string(), image: z.string()})).mutation(async({ctx, input}) => {

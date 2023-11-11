@@ -2,7 +2,6 @@
 
 import { ReactNode, createContext } from "react";
 import { trpc } from "@/app/_trpc/client";
-import Slider from "react-slick";
 
 interface ImageType {
   userId: string | null;

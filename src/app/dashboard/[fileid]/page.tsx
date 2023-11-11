@@ -1,7 +1,7 @@
 import Loading from "@/app/loading";
-import ChatWrapper from "@/components/chat/ChatWrapper";
+import ChatWrapper from "@/components/aireader/chat/ChatWrapper";
 
-import CurrPdf from "@/components/CurrPdf";
+import CurrPdf from "@/components/aireader/CurrPdf";
 import { db } from "@/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { notFound, redirect } from "next/navigation";

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Input } from "./ui/input";
+import { Input } from "../ui/input";
 
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -12,10 +12,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
 import { ChevronDown, Loader2, RotateCw, Search } from "lucide-react";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "../ui/use-toast";
 import { useResizeDetector } from "react-resize-detector";
 import { z } from "zod";
 import { useForm } from "react-hook-form";

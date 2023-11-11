@@ -11,11 +11,12 @@ import UserNavbar from "./UserNavbar";
 const Navbar = () => {
   const { getUser } = getKindeServerSession();
   const user = getUser();
+
   return (
-    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-slate-950 bg-black/30 backdrop-blur-lg transition-all">
+    <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-slate-950 bg-black/30 backdrop-blur-lg transition-all">
       <WidthWrapper>
-        <div className="flex h-14 items-center justify-between border-b border-slate-950">
-          <Link href="/" className="flex z-40 font-semibold">
+        <div className="flex h-16 items-center justify-between border-b border-slate-950">
+          <Link href="/" className="flex z-40 text-xl font-semibold">
             <span>ITools</span>
           </Link>
 
@@ -23,13 +24,22 @@ const Navbar = () => {
             {user ? (
               <>
                 <Link
-                  href="/dashboard"
-                  className={buttonVariants({
+                  href="/aimage"
+                  className={`${buttonVariants({
                     variant: "link",
                     size: "sm",
-                  })}
+                  })} text-lg`}
                 >
-                  Dashboard
+                  Aimage
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className={`${buttonVariants({
+                    variant: "link",
+                    size: "sm",
+                  })} text-lg`}
+                >
+                  AiReader
                 </Link>
                 <UserNavbar
                   name={

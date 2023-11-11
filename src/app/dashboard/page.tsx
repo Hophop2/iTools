@@ -1,8 +1,9 @@
+import DashboardWrapper from "@/components/aireader/dashboard/DashboardWrapper";
 import { db } from "@/db";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
-import Dashboard from "../../components/dashboard/DashboardWrapper";
+
 const Page = async () => {
   const { getUser } = getKindeServerSession();
   const user = getUser();
@@ -17,7 +18,7 @@ const Page = async () => {
 
   if (!dbUser) redirect("/auth-callback?origin=dashboard");
 
-  return <Dashboard />;
+  return <DashboardWrapper />;
 };
 
 export default Page;

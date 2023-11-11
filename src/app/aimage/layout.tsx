@@ -10,7 +10,7 @@ export default function ImageLayout({
   return (
     <ImageContextProvider>
       <ImageCollection />
-      <WidthWrapper className="min-h-[calc(100vh-4rem)]">
+      <WidthWrapper className="min-h-[calc(100vh-12rem)]">
         {children}
       </WidthWrapper>
     </ImageContextProvider>

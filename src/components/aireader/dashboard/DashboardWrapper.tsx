@@ -1,15 +1,14 @@
 "use client";
 
 import { ArrowLeft, FolderX, Loader2, Trash } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { trpc } from "@/app/_trpc/client";
 import { format } from "date-fns";
 import Link from "next/link";
 import DashDropzone from "./DashDropzone";
-import { Button, buttonVariants } from "../ui/button";
+
 import SortedBtn from "./SortedBtn";
 import { $Enums } from "@prisma/client";
-import { useRouter, useSearchParams } from "next/navigation";
 
 type FileType = {
   userId: string | null;
@@ -139,5 +138,3 @@ const DashboardWrapper = () => {
 };
 
 export default DashboardWrapper;
-
-//{files && files?.length !== 0 ? position === 'date' ? : ()}

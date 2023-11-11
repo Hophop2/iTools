@@ -1,9 +1,6 @@
 "use client";
 
 import WidthWrapper from "@/components/WidthWrapper";
-import { buttonVariants } from "@/components/ui/button";
-
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -51,12 +48,12 @@ export default function Home() {
               <h2 className="text-6xl text-center ">
                 <span className="text-violet-600">AI</span>mage
               </h2>
-              <p className="text-zinc-600 text-center text-xs mt-1">
-                Free for all
+              <p className="text-zinc-600 text-center text-xs mt-3">
+                Only for logged users!
               </p>
             </div>
 
-            <p className="text-center mt-4">
+            <p className="text-center mt-2">
               quickly and easily allows you to create an <strong>image </strong>
               in few seconds!
             </p>

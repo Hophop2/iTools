@@ -4,8 +4,8 @@ import { useUploadThing } from "@/lib/uploadthing";
 import { useRouter } from "next/navigation";
 import { trpc } from "@/app/_trpc/client";
 import Dropzone from "react-dropzone";
-import { Progress } from "../ui/progress";
-import { useToast } from "../ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
+import { Progress } from "@/components/ui/progress";
 
 const DashDropzone = () => {
   const router = useRouter();

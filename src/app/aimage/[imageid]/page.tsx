@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 import cuid from "cuid";
 
-const page = () => {
+const Page = () => {
   const { imageid } = useParams();
   const imageIdString = Array.isArray(imageid) ? imageid[0] : imageid;
 
@@ -33,7 +33,7 @@ const page = () => {
   };
 
   return (
-    <div className="flex h-full mt-12 flex-col justify-center items-center pb-8">
+    <div className="flex h-full mt-12 flex-col justify-center items-center ">
       {image ? (
         <>
           <div className="flex w-[512px] items-center mb-2  justify-between  ">
@@ -65,4 +65,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

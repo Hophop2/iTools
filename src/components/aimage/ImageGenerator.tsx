@@ -16,7 +16,11 @@ const ImageGenerator = () => {
   const [image, setImage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
-  const { mutate: generateImage } = trpc.CreateImage.useMutation({
+  const {
+    mutate: generateImage,
+    isError,
+    error,
+  } = trpc.CreateImage.useMutation({
     onSuccess: (newImage) => {
       setImage("");
       setIsLoading(false);
@@ -27,6 +31,9 @@ const ImageGenerator = () => {
     },
     onMutate: () => {
       setIsLoading(true);
+    },
+    onError: () => {
+      setIsLoading(false);
     },
   });
 
@@ -42,7 +49,7 @@ const ImageGenerator = () => {
     setPrompt(e.target.value);
     console.log(e.target.value);
   };
-
+  console.log(error);
   return (
     <>
       {" "}
@@ -73,9 +80,16 @@ const ImageGenerator = () => {
           </div>
         </div>
       ) : isLoading ? (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col mt-24 justify-center gap-8 items-center">
           <Loader2 className="animate-spin" />
-          <p>Wait a moment, we are creating photo for you 😉</p>
+          <p className="text-xl">
+            Wait a moment, we are creating photo for you 😉
+          </p>
+        </div>
+      ) : isError ? (
+        <div className="text-center text-red-600">
+          <p>An error occurred while generating the image</p>
+          <span>Try again or your prompt is forbidden!</span>
         </div>
       ) : null}
     </>

@@ -1,23 +1,12 @@
 "use client";
 
-import { ArrowBigLeft, ArrowBigRightDash, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, {
-  ReactNode,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { ImageContext } from "./ImageContext";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/free-mode";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 
 const ImageCollection = () => {
   const { images } = useContext(ImageContext);
@@ -32,20 +21,24 @@ const ImageCollection = () => {
   }, [images]);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex mt-4 justify-center">
       {images && images.length !== 0 ? (
         <motion.div className="flex  w-[40vw] overflow-hidden" ref={carousel}>
           <motion.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
-            className={`flex gap-4  ${isDragging ? "is-dragging" : ""}`}
+            className={`flex gap-8  ${isDragging ? "is-dragging" : ""}`}
             onDragStart={() => setIsDragging(true)}
             onDragEnd={() => setIsDragging(false)}
             whileTap={{ cursor: "grabbing" }}
           >
-            {images.map((img, index) => {
+            {images.map((img) => {
               return (
-                <Link href={`/aimage/${img.id}`} className="w-16   h-16">
+                <Link
+                  key={img.id}
+                  href={`/aimage/${img.id}`}
+                  className="w-16 hover:shadow-xl hover:shadow-violet-600 border border-violet-600  h-16"
+                >
                   <Image
                     width={64}
                     height={64}
