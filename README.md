@@ -6,7 +6,7 @@
 
 ## Live 📍
 
-<p align="center"><a href='https://i-tools.vercel.app'>iTools app - AIReader and AImage</a></p>
+<p align="center"><a href='https://i-task.vercel.app'>iTask</a></p>
 
 <p align="center">
   <a >
@@ -44,28 +44,23 @@ and how many different things can happen during this. This project caused a huge
 
 | Main Tech                                                    | Description                              |
 | ------------------------------------------------------- | ---------------------------------------- |
-| [Next.js](https://nextjs.org)                           | Framework for React   |
-| [Typescript](https://www.typescriptlang.org)                           | Extension of JavaScript   |
-| [tRPC](https://trpc.io)                           | Tool for creating strongly-typed APIs in TypeScript, enabling communication between the client and the server   |
-| [Kinde](https://kinde.com)                           |  Authentication tool  |
-| [Prisma](https://www.prisma.io)                           | Object-Relational Mapping (ORM)   |
-| [Langchain](https://js.langchain.com/docs/guides/deployment/nextjs)                           | Infinite AI Memory  |
-| [Openai](https://platform.openai.com/docs/introduction)                           |  Platform for working with artificial intelligence, enabling the use of advanced language models and other AI features.   |
-| [Uploadthing](https://uploadthing.com)                           | Adds the capability of file uploads to the application  |
-| [Pinecone](https://www.pinecone.io)                           | Service for vector storage  |
-| [Tailwind](https://tailwindcss.com)                           | Tool for rapidly building user interfaces by defining CSS classes directly in the HTML code.   |
-| [React-pdf](https://tailwindcss.com)                           | Assists in displaying PDF files in a React-based application.   |
+| [React](https://nextjs.org)                           | Framework for React   |
+| [Javascript](https://www.typescriptlang.org)                           | Extension of JavaScript   |
+| [Redux Toolkit](https://trpc.io)                           | Tool for creating strongly-typed APIs in TypeScript, enabling communication between the client and the server   |
+| [Express](https://kinde.com)                           |  Authentication tool  |
+| [Nodejs](https://www.prisma.io)                           | Object-Relational Mapping (ORM)   |
+| [Styled-Components](https://js.langchain.com/docs/guides/deployment/nextjs)                           | Infinite AI Memory  |
+| [MongoDB](https://platform.openai.com/docs/introduction)                           |  Platform for working with artificial intelligence, enabling the use of advanced language models and other AI features.   |
+| [cors](https://uploadthing.com)                           | Adds the capability of file uploads to the application  |
+| [jsonwebtoken](https://www.pinecone.io)                           | Service for vector storage  |
+| [axios](https://www.pinecone.io)                           | Service for vector storage  |
+
         
 | and other packages |  |  
 |-----------|:-----------:| 
-| hookform/resolvers | tailwind-merge  |  
-| lucide-react | pdf-parse | 
-|shadcn  | react-hook-form |  
-|  mantine/hooks | react-markdown | 
-| zod | react-resize-detector |  
-|  ai | react-textarea-autosize | 
-|framer-motion  | simplebar-react |  
-|  resize-detector | tailwindcss-animate | 
+| cookie-parser | bcrypt |  
+|framer-motion  | react-hot-toster |  
+
 
    
 
@@ -115,12 +110,7 @@ PINECONE_API_KEY
 
 OPENAI_API_KEY
 ````
-every enviroments u can get from these links:
-- [Kinde](https://kinde.com)
-- [Langchain](https://js.langchain.com/)
-- [database](https://planetscale.com)
-- [Pinecone](https://www.pinecone.io)
-- [Openai](https://platform.openai.com/)
+
  
 
 
