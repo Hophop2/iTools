@@ -52,7 +52,7 @@ const ImageCollection = () => {
             })}
           </motion.div>
         </motion.div>
-      ) : images && images.length >= 1 ? (
+      ) : images && images.length >= 0 ? (
         <div className="text-zinc-400">Save some generated images!</div>
       ) : (
         <div className="w-full flex justify-center items-center">
