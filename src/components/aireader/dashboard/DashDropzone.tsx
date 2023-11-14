@@ -24,8 +24,7 @@ const DashDropzone = () => {
     retry: true,
     retryDelay: 500,
   });
-
-  //fake progress upload
+  //fake progress
   const startChargeProgress = () => {
     setUploadProgress(0);
     const interval = setInterval(() => {
