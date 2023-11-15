@@ -121,6 +121,11 @@ every enviroments u can get from these links:
 - [database](https://planetscale.com)
 - [Pinecone](https://www.pinecone.io)
 - [Openai](https://platform.openai.com/)
+
+and at the end run this in project file:
+````
+npm install
+````
  
 
 
