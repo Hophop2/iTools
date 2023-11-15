@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center mx-8 sm:mx-0 z-40">
             <Image
-              src="/itools3.jpg"
+              src="/itools2.jpg"
               alt="aireader chat"
               width={700}
               height={390}
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center mx-8 sm:mx-0 pb-8 z-40 ">
             <Image
-              src="/itools7.jpg"
+              src="/itools4.jpg"
               alt="product preview"
               width={700}
               height={390}
