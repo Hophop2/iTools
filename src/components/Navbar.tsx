@@ -13,7 +13,7 @@ const Navbar = () => {
   const user = getUser();
 
   return (
-    <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-slate-950 bg-black/30 backdrop-blur-lg transition-all">
+    <nav className="sticky h-16 inset-x-0 top-0 z-50 w-full border-b border-slate-950 bg-black/30 backdrop-blur-lg transition-all">
       <WidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-slate-950">
           <Link href="/" className="flex z-40 text-xl font-semibold">

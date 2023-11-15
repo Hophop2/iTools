@@ -23,7 +23,10 @@ const ImageCollection = () => {
   return (
     <div className="w-full flex mt-4 justify-center">
       {images && images.length !== 0 ? (
-        <motion.div className="flex  w-[40vw] overflow-hidden" ref={carousel}>
+        <motion.div
+          className="flex  w-[40vw] justify-center overflow-hidden"
+          ref={carousel}
+        >
           <motion.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}

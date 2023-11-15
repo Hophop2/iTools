@@ -26,5 +26,3 @@ const Providers = ({ children }: PropsWithChildren) => {
 };
 
 export default Providers;
-// https://i-tools.vercel.app/api/trpc
-// http://localhost:3000/api/trpc

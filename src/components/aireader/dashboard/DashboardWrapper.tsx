@@ -65,12 +65,12 @@ const DashboardWrapper = () => {
   }
 
   return (
-    <div className="flex  dash-h flex-col md:flex-row ">
+    <div className="flex h-[calc(100vh-4rem)] flex-col md:flex-row ">
       <div className="md:w-2/3 flex justify-center items-center  ">
         <DashDropzone />
       </div>
-      <div className="md:w-1/3  flex-0.5 bg-[rgba(0,0,0,0.5)]">
-        <ol className="min-h-[60vh]">
+      <div className="md:w-1/3 h-full  flex-0.5 bg-[rgba(0,0,0,0.5)]">
+        <ol>
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-4xl ml-6  my-8">My files</h2>
             <SortedBtn position={position} setPosition={setPosition} />

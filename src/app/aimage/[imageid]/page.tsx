@@ -36,7 +36,7 @@ const Page = () => {
     <div className="flex h-full mt-12 flex-col justify-center items-center ">
       {image ? (
         <>
-          <div className="flex w-[512px] items-center mb-2  justify-between  ">
+          <div className="flex w-full sm:w-[512px] items-center mb-2  justify-between  ">
             <p className="w-3/4 ml-2 text-justify ">
               Prompt: <span className="text-zinc-400">{image.prompt}</span>
             </p>
@@ -50,13 +50,15 @@ const Page = () => {
               Dowloand
             </button>
           </div>
-          <Image
-            width={512}
-            height={512}
-            alt="photo"
-            src={image.url}
-            loading="lazy"
-          />
+          <div className="mx-8 md:mx-0">
+            <Image
+              width={512}
+              height={512}
+              alt="photo"
+              src={image.url}
+              loading="lazy"
+            />
+          </div>
         </>
       ) : (
         <Loader2 className="animate-spin" />

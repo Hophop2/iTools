@@ -25,12 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body
-          className={cn(
-            "min-h-screen font-sans text-white  bckg",
-            inter.className
-          )}
-        >
+        <body className={cn(" font-sans text-white  bckg", inter.className)}>
           <Toaster />
           <Navbar />
           <Suspense fallback={<Loading />}>{children}</Suspense>

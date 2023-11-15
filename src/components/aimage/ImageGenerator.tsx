@@ -63,8 +63,8 @@ const ImageGenerator = () => {
       <Button onClick={() => generateImage({ prompt })}>Create Image</Button>
       {/* Image */}
       {image !== "" && !isLoading ? (
-        <div className="pb-12">
-          <div className="relative shadow shadow-violet-600">
+        <div className="pb-12 ">
+          <div className="relative shadow  shadow-violet-600">
             <Image src={image} width={512} height={512} alt="photo" />
             <div className="absolute bottom-0 left-0 w-full flex items-center justify-around h-12  ">
               <Button onClick={() => saveImage({ image, prompt })}>

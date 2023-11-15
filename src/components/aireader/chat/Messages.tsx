@@ -81,8 +81,7 @@ const Messages = ({ fileId }: MessagesProps) => {
             );
         })
       ) : isLoading ? (
-        <div className="w-full flex flex-col gap-2">
-          <Loader2 />
+        <div className="w-full flex justify-center items-center flex-col gap-2">
           <Loader2 />
         </div>
       ) : (
