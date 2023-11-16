@@ -38,7 +38,7 @@ and how many different things can happen during this. This project caused a huge
 - storing files and images
 - chatting with PDF
 - generating images by prompt
-- handled loading,error states
+- handled loading, error states
 - drag and drop uploads
 
 ## Tech/framework used 🔧
@@ -134,7 +134,7 @@ OPENAI_API_KEY
 ````
 every enviroments u can get from these links:
 - [Kinde](https://kinde.com)
-- [Langchain](https://js.langchain.com/)
+- [Uploadthing](https://uploadthing.com)
 - [database](https://planetscale.com)
 - [Pinecone](https://www.pinecone.io)
 - [Openai](https://platform.openai.com/)
