@@ -10,10 +10,11 @@
 
 <p align="center">
   <a >
-    <img src=""
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/1409435b-e935-4857-911f-f756671f75a5"
          alt="Screenshot">
   </a>
 </p>
+
 
 ## Project Overview 🎉
 <p style="text-align: justify;">This project I created by my curiosity about how works AI tools like image generator or chat. My main goals were to increase my skills in typescript, connections between client-server components, better and efficiently handling loading, error states than in my previous project - iTask. As I was going deeper into the project, I realized new things to learn or improve. The hardest part of this project were handling streaming Api responses and functionality of sending messages 
@@ -77,16 +78,32 @@ and how many different things can happen during this. This project caused a huge
 ## Screenshots 📺
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/1409435b-e935-4857-911f-f756671f75a5" alt="Screenshot">
 </p>
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/7d6792ee-89c7-4ea3-90fd-e99c82f7cbdf" alt="Screenshot">
 </p>
 
 <p align="center">
-    <img src="" alt="Screenshot">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/ec242cfc-74a0-491b-b8fa-54e7c402911c" alt="Screenshot">
 </p>
+
+<p align="center">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/44fa8c48-db59-4702-8480-5fd0970c1f0e" alt="Screenshot">
+</p>
+
+<p align="center">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/4336bfaa-0250-4a95-af3c-f817157f71fe" alt="Screenshot">
+</p>
+
+<p align="center">
+    <img src="https://github.com/HubeertC/iTools/assets/85635245/092f5d10-b33c-4031-a0f8-f7102d19a539" alt="Screenshot">
+</p>
+
+
+
+
 
 
 
