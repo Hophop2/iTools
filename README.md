@@ -55,7 +55,7 @@ and how many different things can happen during this. This project caused a huge
 | [Uploadthing](https://uploadthing.com)                           | Adds the capability of file uploads to the application  |
 | [Pinecone](https://www.pinecone.io)                           | Service for vector storage  |
 | [Tailwind](https://tailwindcss.com)                           | Tool for rapidly building user interfaces by defining CSS classes directly in the HTML code.   |
-| [React-pdf](https://tailwindcss.com)                           | Assists in displaying PDF files in a React-based application.   |
+| [React-pdf](https://react-pdf.org)                           | Assists in displaying PDF files in a React-based application.   |
         
 | and other packages |  |  
 |-----------|:-----------:| 
