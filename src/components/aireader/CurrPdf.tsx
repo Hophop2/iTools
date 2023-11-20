@@ -94,7 +94,6 @@ const CurrPdf = ({ file }: PdfProps) => {
             />
           </button>
           <Input
-            value={currPage}
             {...register("page")}
             className={cn(
               "bg-transparent w-8 h-7 mr-2",
