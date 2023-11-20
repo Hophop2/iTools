@@ -53,11 +53,17 @@ const CurrPdf = ({ file }: PdfProps) => {
   });
 
   const hadnlePageUp = () => {
-    if (currPage !== numPages) setCurrPage((prev) => prev + 1);
+    if (currPage !== numPages) {
+      setCurrPage((prev) => prev + 1);
+      setValue("page", String(currPage + 1));
+    }
   };
 
   const hadnlePageDown = () => {
-    if (currPage > 1) setCurrPage((prev) => prev - 1);
+    if (currPage > 1) {
+      setCurrPage((prev) => prev - 1);
+      setValue("page", String(currPage - 1));
+    }
   };
 
   type TPageValidator = z.infer<typeof PageValidator>;
