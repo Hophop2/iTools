@@ -1,5 +1,3 @@
-"use client";
-
 import WidthWrapper from "@/components/WidthWrapper";
 import { Play } from "lucide-react";
 import Image from "next/image";
@@ -56,7 +54,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center mx-8 sm:mx-0 z-40">
             <Image
-              src="/itools2.jpg"
+              src="/itools3.jpg"
               alt="aireader chat"
               width={700}
               height={390}

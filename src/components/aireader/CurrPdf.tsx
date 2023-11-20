@@ -14,7 +14,15 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
-import { ChevronDown, Loader2, RotateCw, Search } from "lucide-react";
+import {
+  ArrowBigLeft,
+  ArrowLeft,
+  ArrowRight,
+  ChevronDown,
+  Loader2,
+  RotateCw,
+  Search,
+} from "lucide-react";
 import { useToast } from "../ui/use-toast";
 import { useResizeDetector } from "react-resize-detector";
 import { z } from "zod";
@@ -44,6 +52,14 @@ const CurrPdf = ({ file }: PdfProps) => {
       .refine((num) => Number(num) > 0 && Number(num) <= numPages!),
   });
 
+  const hadnlePageUp = () => {
+    if (currPage !== numPages) setCurrPage((prev) => prev + 1);
+  };
+
+  const hadnlePageDown = () => {
+    if (currPage > 1) setCurrPage((prev) => prev - 1);
+  };
+
   type TPageValidator = z.infer<typeof PageValidator>;
 
   const {
@@ -70,7 +86,15 @@ const CurrPdf = ({ file }: PdfProps) => {
     <div className="w-full flex-col  rounded-md shadow shadow-violet-400 flex">
       <div className="h-12 w-full mb-1  flex justify-between items-center">
         <div className="text-zinc-500 ml-4 text-xl flex items-center">
+          <button disabled={currPage === 1} onClick={hadnlePageDown}>
+            <ArrowLeft
+              className={cn("w-5 h-5 mr-2 text-violet-600", {
+                "text-zinc-400": currPage === 1,
+              })}
+            />
+          </button>
           <Input
+            value={currPage}
             {...register("page")}
             className={cn(
               "bg-transparent w-8 h-7 mr-2",
@@ -84,6 +108,13 @@ const CurrPdf = ({ file }: PdfProps) => {
           />
           <span>/</span>
           <span>{numPages ?? "?"}</span>
+          <button disabled={currPage === numPages} onClick={hadnlePageUp}>
+            <ArrowRight
+              className={cn("w-5 h-5 ml-2 text-violet-600", {
+                "text-zinc-400": currPage === numPages,
+              })}
+            />
+          </button>
         </div>
         <div className=" flex gap-4 mr-4">
           <DropdownMenu>
