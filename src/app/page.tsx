@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center mx-8 sm:mx-0 z-40">
             <Image
-              src="/itools3.jpg"
+              src="/itools33.jpg"
               alt="aireader chat"
               width={700}
               height={390}
