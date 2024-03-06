@@ -53,7 +53,7 @@ export const ourFileRouter = {
 
         const pageLvlDocs = await loader.load()
 
-        const pagesAmt = pageLvlDocs.length
+        
 
         //vectorize and index doc
       
@@ -87,7 +87,7 @@ export const ourFileRouter = {
           }
         })
       } catch (err) {
-        console.log("errorrr" + err)
+        console.log("erorr" + err)
         await db.file.update({
           data: {
             uploadStatus: 'FAILED'

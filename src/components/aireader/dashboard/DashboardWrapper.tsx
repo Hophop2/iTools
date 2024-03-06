@@ -41,7 +41,7 @@ const DashboardWrapper = () => {
     },
   });
 
-  const handleSort = (files: FileType[], position: string) => {
+  const handleSortFiles = (files: FileType[], position: string) => {
     if (position === "newest") {
       return files.sort(
         (a, b) =>
@@ -61,7 +61,7 @@ const DashboardWrapper = () => {
   let sortedFiles: FileType[] | [] = [];
 
   if (files && files.length !== 0) {
-    sortedFiles = handleSort(files, position);
+    sortedFiles = handleSortFiles(files, position);
   }
 
   return (

@@ -147,7 +147,7 @@ deleteFile: privateProcedure.input(z.object({id: z.string()})).mutation(async ({
 
 CreateImage: privateProcedure.input(z.object({prompt: z.string()})).mutation(async({ctx, input}) => {
   try {
-    const {userId} = ctx
+    
     const {prompt} = input
     
       const response = await openai.images.generate({
